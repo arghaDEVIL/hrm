@@ -22,13 +22,15 @@
       return;
     }
 
+    // Swipe right - go to previous slide
     if (deltaX > minSwipeDistance) {
       console.log("Swipe Right - Previous");
-      Flowtime.prevFragment();
+      Flowtime.prev();
     }
+    // Swipe left - go to next slide
     else if (deltaX < -minSwipeDistance) {
       console.log("Swipe Left - Next");
-      Flowtime.nextFragment();
+      Flowtime.next();
     }
   }
 
@@ -371,16 +373,18 @@
     prevBtn.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
+      console.log("Previous button clicked");
       if (typeof Flowtime !== 'undefined') {
-        Flowtime.prevFragment();
+        Flowtime.prev();
       }
     }, false);
 
     prevBtn.addEventListener("touchend", function (e) {
       e.preventDefault();
       e.stopPropagation();
+      console.log("Previous button touched");
       if (typeof Flowtime !== 'undefined') {
-        Flowtime.prevFragment();
+        Flowtime.prev();
       }
     }, false);
 
@@ -393,16 +397,18 @@
     nextBtn.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
+      console.log("Next button clicked");
       if (typeof Flowtime !== 'undefined') {
-        Flowtime.nextFragment();
+        Flowtime.next();
       }
     }, false);
 
     nextBtn.addEventListener("touchend", function (e) {
       e.preventDefault();
       e.stopPropagation();
+      console.log("Next button touched");
       if (typeof Flowtime !== 'undefined') {
-        Flowtime.nextFragment();
+        Flowtime.next();
       }
     }, false);
 
