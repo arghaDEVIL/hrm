@@ -453,6 +453,167 @@
         -webkit-user-select: none;
         user-select: none;
       }
+
+      /* Fix for final page text visibility */
+      @media (max-width: 768px) {
+        /* ...existing code... */
+        
+        /* Ensure final page is visible */
+        .page-55 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          padding: 40px 15px !important;
+        }
+        
+        .page-55 img {
+          max-width: 100% !important;
+          height: auto !important;
+          margin-bottom: 20px !important;
+        }
+        
+        .page-55 .text {
+          width: 100% !important;
+          text-align: center !important;
+          font-size: 14px !important;
+          line-height: 1.6 !important;
+          color: inherit !important;
+        }
+        
+        .page-55 p {
+          padding: 15px !important;
+          background: rgba(255, 255, 255, 0.1) !important;
+          border-radius: 10px !important;
+          margin: 10px 0 !important;
+        }
+        
+        .page-55 span {
+          display: block !important;
+          margin: 8px 0 !important;
+          font-size: 14px !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .page-55 {
+          min-height: 100vh;
+          padding: 30px 12px !important;
+        }
+        
+        .page-55 .text {
+          font-size: 13px !important;
+          line-height: 1.5 !important;
+        }
+        
+        .page-55 p {
+          padding: 12px !important;
+        }
+        
+        .page-55 span {
+          font-size: 13px !important;
+          margin: 6px 0 !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-55 {
+          min-height: 100vh;
+          padding: 20px 10px !important;
+        }
+        
+        .page-55 img {
+          max-width: 90% !important;
+          margin-bottom: 15px !important;
+        }
+        
+        .page-55 .text {
+          font-size: 12px !important;
+          line-height: 1.4 !important;
+        }
+        
+        .page-55 p {
+          padding: 10px !important;
+          margin: 8px 0 !important;
+        }
+        
+        .page-55 span {
+          font-size: 12px !important;
+          margin: 4px 0 !important;
+        }
+      }
+
+      /* Ensure center-img is visible */
+      .center-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .center-img {
+          min-height: 80vh;
+          font-size: 36px;
+          padding: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .center-img {
+          min-height: 70vh;
+          font-size: 28px;
+          padding: 10px;
+        }
+      }
+
+      /* Fix for all pages with .text class */
+      .ft-page .text {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+      }
+
+      /* Improve readability of final message */
+      .right-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        .right-img {
+          flex-direction: column;
+        }
+        
+        .right-img img {
+          max-width: 100% !important;
+          order: 1 !important;
+        }
+        
+        .right-img p {
+          order: 2 !important;
+          width: 100% !important;
+        }
+      }
+
+      /* Ensure text doesn't overflow */
+      p, h2, h3, span {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Add better contrast for final message */
+      .page-55 p {
+        color: white !important;
+        font-weight: 500;
+      }
     `;
     document.head.appendChild(style);
 
